@@ -22,7 +22,8 @@ function BooksTable() {
     {
         name: 'Image',
         // selector:  (row) => row.imageLink,
-        cell: (row) => <img style={{ width: 'auto', height: '12rem' , padding: '1rem'}} src={row.imageLink} alt={row.imageLink} />,
+        // cell: (row) => <img style={{ width: 'auto', height: '12rem' , padding: '1rem'}} src={row.imageLink} alt={row.imageLink} />,
+        cell: (row) => <img className="imagezoom"  src={row.imageLink} alt={row.imageLink} />,
         sortable: true,
         width: "12rem"
     },
