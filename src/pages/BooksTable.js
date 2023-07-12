@@ -381,17 +381,15 @@ const applyFilters = () => {
   setRecords(filteredBooks); // Update the state variable to store filtered books
 };
   return (
-
-    
-      // <div className="mt-4 col-md-10 m row justify-content-center"></div>
-
     <div className="mt-3 row justify-content-center">
       <h1 className="row justify-content-center mt-3 pb-3">Book List</h1>
 
-        <div className="col d-flex justify-content-around">
-            {/* <div >
-            <select onChange={changeBookPage}>
-                <option value=''>------</option>
+        {/* <div className="col d-flex justify-content-around"> */}
+        <div className="col-md-11">
+          <div className="row justify-content-around mb-3">
+            <div className="col-sm-3">
+              <select id="pagesFilter" onChange={applyFilters} className="w-100" style={{ maxWidth: "100%" }}>
+                <option value="">------</option>
                 <option value="0-100">0 - 100 pages</option>
                 <option value="101-200">101 - 200 pages</option>
                 <option value="201-300">201 - 300 pages</option>
@@ -403,97 +401,53 @@ const applyFilters = () => {
                 <option value="801-900">801 - 900 pages</option>
                 <option value="901-1000">901 - 1000 pages</option>
                 <option value="1001-1100">1001 - 1100 pages</option>
-         
-            </select>
+              </select>
             </div>
-            <div >
-            <select onChange={changeCentury}>
-                <option value=''>------</option>
-                <option value="1">1st Century</option>
-                <option value="2">2nd Century</option>
-                <option value="3">3rd Century</option>
-                <option value="4">4th Century</option>
-                <option value="5">5th Century</option>
-                <option value="6">6th Century</option>
-                <option value="7">7th Century</option>
-                <option value="8">8th Century</option>
-                <option value="9">9th Century</option>
-                <option value="10">10th Century</option>
-                <option value="11">11th Century</option>
-                <option value="12">12th Century</option>
-                <option value="13">13th Century</option>
-                <option value="14">14th Century</option>
-                <option value="15">15th Century</option>
-                <option value="16">16th Century</option>
-                <option value="17">17th Century</option>
-                <option value="18">18th Century</option>
-                <option value="19">19th Century</option>
-                <option value="20">20th Century</option>
-                <option value="21">21st Century</option>
-            </select>
-            </div> */}
-             <div>
-          <select id="pagesFilter" onChange={applyFilters}>
-            <option value="">------</option>
-            <option value="0-100">0 - 100 pages</option>
-            <option value="101-200">101 - 200 pages</option>
-            <option value="201-300">201 - 300 pages</option>
-            <option value="301-400">301 - 400 pages</option>
-            <option value="401-500">401 - 500 pages</option>
-            <option value="501-600">501 - 600 pages</option>
-            <option value="601-700">601 - 700 pages</option>
-            <option value="701-800">701 - 800 pages</option>
-            <option value="801-900">801 - 900 pages</option>
-            <option value="901-1000">901 - 1000 pages</option>
-            <option value="1001-1100">1001 - 1100 pages</option>
-          </select>
-        </div>
-        <div>
-          <select id="yearFilter" onChange={applyFilters}>
-            <option value="">------</option>
-            <option value="-2000 - 0">Before 0CE</option>
-            <option value="1-100">1st Century</option>
-            <option value="101-200">2nd Century</option>
-            <option value="201-300">3rd Century</option>
-            <option value="301-400">4th Century</option>
-            <option value="401-500">5th Century</option>
-            <option value="501-600">6th Century</option>
-            <option value="601-700">7th Century</option>
-            <option value="701-800">8th Century</option>
-            <option value="801-900">9th Century</option>
-            <option value="901-1000">10th Century</option>
-            <option value="1001-1100">11th Century</option>
-            <option value="1101-1200">12th Century</option>
-            <option value="1201-1300">13th Century</option>
-            <option value="1301-1400">14th Century</option>
-            <option value="1401-1500">15th Century</option>
-            <option value="1501-1600">16th Century</option>
-            <option value="1601-1700">17th Century</option>
-            <option value="1701-1800">18th Century</option>
-            <option value="1801-1900">19th Century</option>
-            <option value="1901-2000">20th Century</option>
-            <option value="2001-2100">21st Century</option>
-          </select>
-        </div>
-
-            <div>
-                <input type="text" onChange={handleFilter} placeholder='Search Here'/>
+            <div className="col-sm-3">
+              <select id="yearFilter" onChange={applyFilters} className="w-100" style={{ maxWidth: "100%" }}>
+                <option value="">------</option>
+                <option value="-2000 - 0">Before 0CE</option>
+                <option value="1-100">1st Century</option>
+                <option value="101-200">2nd Century</option>
+                <option value="201-300">3rd Century</option>
+                <option value="301-400">4th Century</option>
+                <option value="401-500">5th Century</option>
+                <option value="501-600">6th Century</option>
+                <option value="601-700">7th Century</option>
+                <option value="701-800">8th Century</option>
+                <option value="801-900">9th Century</option>
+                <option value="901-1000">10th Century</option>
+                <option value="1001-1100">11th Century</option>
+                <option value="1101-1200">12th Century</option>
+                <option value="1201-1300">13th Century</option>
+                <option value="1301-1400">14th Century</option>
+                <option value="1401-1500">15th Century</option>
+                <option value="1501-1600">16th Century</option>
+                <option value="1601-1700">17th Century</option>
+                <option value="1701-1800">18th Century</option>
+                <option value="1801-1900">19th Century</option>
+                <option value="1901-2000">20th Century</option>
+                <option value="2001-2100">21st Century</option>
+              </select>
             </div>
 
+            <div className="col-sm-3">
+                <input type="text" onChange={handleFilter} placeholder='Search Here' className="w-100" style={{maxWidth: "100%"}}/>
+            </div>
+            </div>
         </div>
-        <div className="table-container mt-3 col-md-11">
-        
-            <DataTable 
-                 customStyles={customStyles}
-                 columns={columns}
-                 data={records}
-                 selectableRows
-                 fixedHeader
-                 pagination
-              >
+      <div className="table-container mt-3 col-md-11">
+        <DataTable 
+            customStyles={customStyles}
+            columns={columns}
+            data={records}
+            selectableRows
+            fixedHeader
+            pagination
+        >
 
-              </DataTable>
-        </div>
+        </DataTable>
+      </div>
         
 
     </div>
