@@ -68,15 +68,27 @@ function BooksTable() {
 
   useEffect(() => {
     const data = goodbooks.map((goodbook) => {
+      if (goodbook != '') {
         return {
             author : goodbook.author,
             country : goodbook.country,
-            imageLink : <img style={{width : 'auto' , height:"8rem"}} src={goodbook.imageLink} alt={goodbook.imageLink}/>,
+            imageLink : goodbook.imageLink,
             language : goodbook.language,
             pages : goodbook.pages,
             title : goodbook.title,
             year : goodbook.year,
         }
+      } else {
+        return {
+          author : goodbook.author,
+          country : goodbook.country,
+          imageLink : <img style={{width : 'auto' , height:"8rem"}} src={goodbook.imageLink} alt={goodbook.imageLink}/>,
+          language : goodbook.language,
+          pages : goodbook.pages,
+          title : goodbook.title,
+          year : goodbook.year,
+      }
+    }
     })
     setRecords(data);
   }, [goodbooks])

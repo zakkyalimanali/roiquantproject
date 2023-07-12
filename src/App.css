@@ -13,3 +13,10 @@ body {
 .table-container .rdt_TableRow:nth-of-type(even) {
   background-color: white;
 }
+
+
+#nav-dropdown {
+  color: black;
+  font-weight: bold;
+  /* background-color: red; */
+}

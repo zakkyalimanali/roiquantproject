@@ -8,12 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Navtop() {
   return (
     <div>
-      <Navbar className="p-3 sticky-top" expand="lg" style={{ backgroundImage: 'linear-gradient(to bottom left, lightblue, royalblue)' }}>
-        <Navbar.Brand><NavLink style={{color: 'white'}} to="/">Zakky Book Libary</NavLink></Navbar.Brand>
+      {/* <Navbar className="p-3 sticky-top" expand="lg" style={{ backgroundImage: 'linear-gradient(to bottom left, lightblue, royalblue)' }}> */}
+      <Navbar className="p-3 sticky-top" expand="lg" style={{ backgroundImage: 'linear-gradient(to bottom left, rgba(245,184,180,96), orange)' }}>
+      {/* <Navbar className="p-3 sticky-top" expand="lg" style={{backgroundColor: 'rgba(245,184,180,96)'}}> */}
+        <Navbar.Brand><NavLink style={{color: 'black'}} to="/">Zakky Book Libary</NavLink></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav>
-                    <NavDropdown title="Books">
+                    <NavDropdown title={"Books"} id="nav-dropdown">
                         <NavDropdown.Item>
                             <NavLink to="/bookstable">Table of Books</NavLink>
                         </NavDropdown.Item>
