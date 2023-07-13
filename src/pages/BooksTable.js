@@ -3,7 +3,8 @@ import books from '../books.json'
 import DataTable from 'react-data-table-component'
 
 function BooksTable() {
-  const [goodbooks, setGoodBooks] = useState(books);
+  // const [goodbooks, setGoodBooks] = useState(books);
+  const [goodbooks] = useState(books);
   const [records, setRecords] = useState([]);
 
   const columns = [
@@ -69,7 +70,7 @@ function BooksTable() {
 
   useEffect(() => {
     const data = goodbooks.map((goodbook) => {
-      if (goodbook != '') {
+      if (goodbook !== '') {
         return {
             author : goodbook.author,
             country : goodbook.country,
@@ -165,7 +166,7 @@ const applyFilters = () => {
                 <option value="1001-1100">1001 - 1100 pages</option>
               </select>
             </div>
-            <div className="col-sm-3">
+            {/* <div className="col-sm-3">
               <select id="yearFilter" onChange={applyFilters} className="w-100" style={{ maxWidth: "100%" }}>
                 <option value="">------</option>
                 <option value="-2000 - 0">Before 0CE</option>
@@ -179,6 +180,24 @@ const applyFilters = () => {
                 <option value="701-800">8th Century</option>
                 <option value="801-900">9th Century</option>
                 <option value="901-1000">10th Century</option>
+                <option value="1001-1100">11th Century</option>
+                <option value="1101-1200">12th Century</option>
+                <option value="1201-1300">13th Century</option>
+                <option value="1301-1400">14th Century</option>
+                <option value="1401-1500">15th Century</option>
+                <option value="1501-1600">16th Century</option>
+                <option value="1601-1700">17th Century</option>
+                <option value="1701-1800">18th Century</option>
+                <option value="1801-1900">19th Century</option>
+                <option value="1901-2000">20th Century</option>
+                <option value="2001-2100">21st Century</option>
+              </select>
+            </div> */}
+            <div className="col-sm-3">
+              <select id="yearFilter" onChange={applyFilters} className="w-100" style={{ maxWidth: "100%" }}>
+                <option value="">------</option>
+                <option value="-2000 - 0">Before 0CE</option>
+                <option value="1-1000">1st - 10th Century</option>
                 <option value="1001-1100">11th Century</option>
                 <option value="1101-1200">12th Century</option>
                 <option value="1201-1300">13th Century</option>
