@@ -3,7 +3,7 @@ import temp from '../static/images/bookabout.jpg'
 
 function AboutProject() {
   return (
-    <div className="d-flex justify-content-center pb-5">
+    <div className="d-flex justify-content-center mb-5">
         <div className='col-md-6 about-box'>
             <h2 className="mt-3 d-flex justify-content-center">About This Project</h2>
             <div className="row d-flex justify-content-center mt-3 ms-auto me-auto ps-2 pe-2 pb-3"> 
