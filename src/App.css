@@ -35,9 +35,17 @@ body {
 }
 
 .bookshero {
-  height: 40rem;
-  width: 100%;
+  height: 25rem;
+  width: 200%;
 }
+
+@media (min-width: 576px) {
+  .bookshero {
+    height: 40rem;
+    width: 100%;
+  }
+}
+
 
 .bookshop-container {
   position: relative;
@@ -83,6 +91,22 @@ body {
 
 .card_border {
   border: 2px solid black;
+}
+
+.about-box {
+  background-image: linear-gradient(to bottom left, rgba(245,184,180,96), orange);
+  border : 1px solid black;
+  border-radius: 25px;
+}
+
+.bookhero {
+  height: auto;
+  width: 12rem;
+}
+
+.Footer {
+  background-image:  linear-gradient(to bottom left, rgba(245,184,180,96), orange);
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');

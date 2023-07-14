@@ -11,7 +11,7 @@ function Navtop() {
       {/* <Navbar className="p-3 sticky-top" expand="lg" style={{ backgroundImage: 'linear-gradient(to bottom left, lightblue, royalblue)' }}> */}
       <Navbar className="p-3 sticky-top" expand="lg" style={{ backgroundImage: 'linear-gradient(to bottom left, rgba(245,184,180,96), orange)' }}>
       {/* <Navbar className="p-3 sticky-top" expand="lg" style={{backgroundColor: 'rgba(245,184,180,96)'}}> */}
-        <Navbar.Brand><NavLink style={{color: 'black'}} to="/">Zakky Book Library</NavLink></Navbar.Brand>
+        <Navbar.Brand><NavLink style={{color: 'black'}} to="/"><b>Zakky's Book Library</b></NavLink></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav>

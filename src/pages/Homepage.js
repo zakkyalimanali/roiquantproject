@@ -1,22 +1,13 @@
 import React , {useState} from 'react'
 import bookhero from '../static/images/bookshero.jpg'
 import books from '../books.json'
+import AboutProject from './AboutProject';
+import Footer from './Footer';
 
 function Homepage() {
   const [goodbooks] = useState(books);
 
   return (
-    // <div>
-  
-    //   <div>
-    //     <img className="bookshero mt-5" src={bookhero} alt="bookhero"/>
-    //     <div>
-    //       <h1 className="titleborder d-flex justify-content-center p-3">Zakky's BookShop</h1>
-    //     </div>
-        
-    //   </div>
-      
-    // </div>
 
     <div>
       <div className="bookshop-container">
@@ -34,7 +25,7 @@ function Homepage() {
             <div className="col-md-3 mt-3 pb-5">
             <div class="card_border">
              <img className="card-image" src={goodbook.imageLink} alt="Avatar"/>
-               <div className="container mt-3">
+               <div className="container mt-3 mb-3">
                 <h5 className="d-flex justify-content-center" >Author: {goodbook.author}</h5>
                 <h5 className="d-flex justify-content-center">Title: {goodbook.title}</h5>
 
@@ -50,6 +41,8 @@ function Homepage() {
           </div>
 
       </div>
+      <AboutProject/>
+      <Footer/>
     </div>
   )
 }
