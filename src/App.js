@@ -6,7 +6,7 @@ import BooksTable from './pages/BooksTable';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{overflowX:"hidden"}}>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout/>}>
